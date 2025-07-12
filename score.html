@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Basketball Scoreboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="scoreboard-container">
+    <div>
+      <span id="timer">10:00</span>
+    </div>
+    <div class="teams-row">
+      <div class="team">
+        <input id="team1Name" value="Team 1" />
+        <div id="score1">0</div>
+        <div class="foul">Fouls: <span id="foul1">0</span></div>
+      </div>
+      <span class="vs">VS</span>
+      <div class="team">
+        <input id="team2Name" value="Team 2" />
+        <div id="score2">0</div>
+        <div class="foul">Fouls: <span id="foul2">0</span></div>
+      </div>
+    </div>
+    <div class="controls-row">
+      <button onclick="changeFoul(1, 1)">Foul+1</button>
+      <button onclick="changeScore(1, 1)">Score+1</button>
+      <button onclick="changeScore(1, -1)">Score-1</button>
+      <button onclick="startGame()">Start Game</button>
+      <button onclick="changeScore(2, 1)">Score+1</button>
+      <button onclick="changeScore(2, -1)">Score-1</button>
+      <button onclick="changeFoul(2, 1)">Foul+1</button>
+    </div>
+    <div class="bottom-row">
+      <button onclick="resetGame()">Reset Game</button>
+      <button onclick="timeout()">Timeout</button>
+    </div>
+  </div>
+  <script src="score.js"></script>
+</body>
+</html>
